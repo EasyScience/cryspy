@@ -1,0 +1,36 @@
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
+
+[project]
+name = 'cryspy'
+version = '0.7.7'
+description = 'Polarized Neutron Diffraction Data Analysis'
+authors = [{name = 'Iurii Kibalin'}]
+readme = 'README.md'
+license = { file = 'LICENSE' }
+classifiers = [
+    'Topic :: Scientific/Engineering',
+    'Development Status :: 4 - Beta',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12'
+]
+requires-python = '>=3.9,<3.13'
+dependencies = [
+    'numpy', 
+    'scipy', 
+    'pycifstar',
+    'matplotlib'
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ['cryspy']
